@@ -3,8 +3,8 @@ RM := rm -f
 EXECSTACK := execstack
 
 # flags
-CFLAGSEXEC := -ggdb -mpreferred-stack-boundary=2 -zexecstack -fno-stack-protector
-CFLAGSNOEXEC := -ggdb -mpreferred-stack-boundary=2 -fno-stack-protector
+CFLAGSEXEC := -ggdb -mpreferred-stack-boundary=2 -zexecstack -fno-stack-protector -no-pie -fno-pie -m32 
+CFLAGSNOEXEC := -ggdb -mpreferred-stack-boundary=2 -fno-stack-protector -no-pie -fno-pie -m32
 
 # sources
 sources := target0.c target1.c target2.c target3.c  target4.c
